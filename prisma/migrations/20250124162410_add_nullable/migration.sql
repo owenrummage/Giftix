@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Gift" ALTER COLUMN "reservedBy" DROP NOT NULL,
+ALTER COLUMN "reservedName" DROP NOT NULL;
