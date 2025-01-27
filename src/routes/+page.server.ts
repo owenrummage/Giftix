@@ -9,7 +9,9 @@ export const load: PageServerLoad = async ({ cookies }) => {
 
 	const data = await useAuthentication(sessionToken);
 
-	let gifts = await prisma.gift.findMany();
+	let gifts = await prisma.gift.findMany({
+		where: { active: true }
+	});
 
 	return {
 		user: data,
